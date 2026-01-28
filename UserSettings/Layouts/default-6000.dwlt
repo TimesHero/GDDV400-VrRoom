@@ -1663,7 +1663,7 @@ MonoBehaviour:
     m_DynamicPanelBehavior: 0
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 0
+  m_LastSelectedObjectID: 86182
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
