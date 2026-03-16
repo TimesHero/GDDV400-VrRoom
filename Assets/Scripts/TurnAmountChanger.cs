@@ -4,7 +4,7 @@ using TMPro;
 
 public class TurnAmountChanger : MonoBehaviour
 {
-    public SnapTurnProvider mySnapTurn;
+    public SnapTurnProvider snapTurnProvider;
     public TMP_Text statusText; 
 
     private bool is45Degrees = true;
@@ -17,17 +17,17 @@ public class TurnAmountChanger : MonoBehaviour
     //should hopefully toggle between settings and update the menu's text
     public void ToggleTurnAmount()
     {
-        if (mySnapTurn != null)
+        if (snapTurnProvider != null)
         {
             is45Degrees = !is45Degrees;
 
             if (is45Degrees)
             {
-                mySnapTurn.turnAmount = 45f;
+                snapTurnProvider.turnAmount = 45f;
             }
             else
             {
-                mySnapTurn.turnAmount = 90f;
+                snapTurnProvider.turnAmount = 90f;
             }
             
             UpdateUIText();
@@ -36,9 +36,9 @@ public class TurnAmountChanger : MonoBehaviour
 
     private void UpdateUIText()
     {
-        if (statusText != null && mySnapTurn != null)
+        if (statusText != null && snapTurnProvider != null)
         {
-            statusText.text = mySnapTurn.turnAmount + "°";
+            statusText.text = snapTurnProvider.turnAmount + "°";
         }
     }
 }
